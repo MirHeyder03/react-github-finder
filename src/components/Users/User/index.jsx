@@ -4,7 +4,7 @@ const User = ({ users }) => {
   return (
     <>
       {users.map((user) => (
-        <div key={user.id} className="col-md-4">
+        <div key={user.id} className="col-md-4 mb-3">
           <div className="card">
             <img src={user.avatar_url} alt="" className="img-fluid" />
             <div className="card-body">
