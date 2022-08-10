@@ -17,7 +17,7 @@ const SearcBar = ({searchUser}) => {
         <div className="input-group">
           <input type="text" className='form-control margin-right-3 m-1' onChange={searching} value={search} />
           <div className="input-group-append">
-              <button type='submit' className='btn btn-primary m-1'>Search</button>
+              <button type='submit' className='btn btn-dark m-1'>Search</button>
           </div>
         </div>
         </div>
