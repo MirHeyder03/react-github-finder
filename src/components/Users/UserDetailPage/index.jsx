@@ -5,8 +5,6 @@ import { useParams } from "react-router-dom";
 
 const UserDetailPage = () => {
   const [user, setUser] = useState({});
-
-  console.log(user);
   let { login } = useParams();
 
   useEffect(() => {
@@ -17,7 +15,7 @@ const UserDetailPage = () => {
     <div className="container mt-3">
       <div className="row">
         <div className="col-md-3">
-          <img url={""} className="card-img-top" />
+          <img url={user.avatar_url} className="card-img-top" />
           <div className="card-body">
             <p className="card-text">{login}</p>
             <p>
@@ -32,13 +30,13 @@ const UserDetailPage = () => {
               {
                 <>
                   <h3>About</h3>
-                  <p>bio</p>
+                  <p>{user.bio}</p>
                 </>
               }
               {
                 <>
                   <h3>blog</h3>
-                  <p>blog</p>
+                  <p>{user.blog}</p>
                 </>
               }
               <div>

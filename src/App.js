@@ -23,21 +23,12 @@ const App = (props) => {
     const url = `https://api.github.com/search/users?q=${search}`;
     axios.get(url).then(({ data }) => setUsers(data.items));
   };
-  const getUser = (username) => {
-    console.log(username)
-    
-  };
-  getUser()
   return (
     <div>
       <Navbar />
       <Routes>
         <Route path="/" element={<SearcBar searchUser={searchUser} />} />
-        <Route
-          exact
-          path={"/user/:login"}
-          element={<UserDetailPage />}
-        />
+        <Route exact path={"/user/:login"} element={<UserDetailPage />} />
         <Route
           path="/"
           element={
